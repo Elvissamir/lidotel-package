@@ -1,5 +1,5 @@
 {
-  "name": "lidotel-shared-web",
+  "name": "lidotel-ui",
   "type": "module",
   "files": [
     "dist"
@@ -51,5 +51,9 @@
   "keywords": [
     "npm",
     "lidotel-package"
-  ]
+  ],
+  "types": "./dist/index.d.ts",
+  "description": "This is the UI package used to share common components\r across all Lidotel applications.",
+  "author": "Elvis Carrasco",
+  "license": "ISC"
 }
