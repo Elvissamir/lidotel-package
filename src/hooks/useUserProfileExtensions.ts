@@ -20,7 +20,7 @@ export interface TagsData {
 
 const useUserProfileExtensions = () => {
     const { userProfile } = useContext(UserProfileContext)
-    const { auth, LidotelAppConfig } = useContext(LidotelAuthDataContext)
+    const { LidotelAppConfig } = useContext(LidotelAuthDataContext)
     const [additionalTitle, setAdditionalTitle] = useState("")
     const [bio, setBio] = useState("")
     const [tags, setTags] = useState<TagsData>({
@@ -147,8 +147,8 @@ const useUserProfileExtensions = () => {
     }
 
     const onSave = async () => {
-        if (auth && auth.user && userProfile && LidotelAppConfig) {
-            const token = auth.user.access_token
+        if (userProfile && LidotelAppConfig) {
+            const token = ""
             const apiUrl = LidotelAppConfig.api.baseUri as string
             const tenantId = userProfile.tenantId
 
@@ -197,9 +197,9 @@ const useUserProfileExtensions = () => {
     }
 
     const getExtensions = async () => {
-        if (auth && auth.user && userProfile && LidotelAppConfig) {
+        if (userProfile && LidotelAppConfig) {
             console.log('fetching user extensions...')
-            const token = auth.user.access_token
+            const token = ""
             const apiUrl = LidotelAppConfig.api.baseUri as string
 
             const result = await fetchUserProfile(token, apiUrl)
