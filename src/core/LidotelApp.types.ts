@@ -11,46 +11,10 @@ interface App {
     notificationsApplicationId: string 
     launcher?: string 
 }
-  
-interface Auth {
-    authority: string
-    clientId: string
-    redirectUri: string
-    silentRedirectUri: string
-    postLogoutRedirectUri: string
-    scope: string
-    responseType: string
-    loadUserInfo: boolean
-    automaticSilentRenew: boolean
-    automaticSilentSignin: boolean
-}
-
-/*
-interface Links {
-    documentation: string
-    apiPortal: string
-    privacyPolicy: string
-    launcherUri: string
-    terms: string
-    statusPage: string
-    eula: string
-}
-
-interface ApiSchemas {
-    'edfi': string
-}
-  
-interface Signalr {
-    global: string
-    jobs: string
-}
-
-*/
 
 export interface LidotelAppConfig {
     api: Api
     app: App
-    auth: Auth
 }
 
 export interface UserProfileContextData {

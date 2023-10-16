@@ -1,4 +1,4 @@
-import { ChakraProvider, Flex, Text } from "@chakra-ui/react"
+import { ChakraProvider, Flex } from "@chakra-ui/react"
 import { Footer, TopBar, TopBarLeft, TopBarRight } from "./components"
 import { baseTheme } from "./themes"
 import SideBar from "./components/layout/SideBar"
@@ -14,6 +14,8 @@ import '@fontsource/open-sans/800.css'
 import "@fontsource/archivo-narrow"
 import { useState } from "react"
 import LidotelErrorPage from './pages/LidotelErrorPage'
+import { CgHome, CgUser } from "react-icons/cg"
+import LoginForm from "./components/layout/LoginForm"
 
 function App() {
   const [selectedItemId, setSelectedItemId] = useState("allStudents")
@@ -43,10 +45,14 @@ function App() {
             <SideBar
               selectedItemId={selectedItemId}
               ariaCurrentType="page"
-              items={[]}
+              items={[
+                { id: 'home', text: 'Home', icon: <CgHome /> },
+                { id: 'users', text: "Usuarios", icon: <CgUser /> }
+              ]}
               show={true}
               onClickItem={onChangeSelected} />
         </Flex>
+        <LoginForm />
         <Footer />
     </ChakraProvider>
   )

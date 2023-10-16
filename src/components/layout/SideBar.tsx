@@ -19,7 +19,7 @@ interface SideBarProps {
 
 const SideBar = ({ items, selectedItemId, ariaCurrentType, onClickItem, show }: SideBarProps) => {
     const [ expanded, setExpanded ] = useState(false)
-    const bg = useColorModeValue("black", "blue.900")
+    const bg = useColorModeValue("gray.700", "blue.900")
 
     const toggleExpand = () => {
         setExpanded(!expanded)
@@ -34,7 +34,7 @@ const SideBar = ({ items, selectedItemId, ariaCurrentType, onClickItem, show }: 
             padding={expanded? '0 20px' : '0 10px'}
             transition="all 0.5s ease-in-out"
             h='full'
-            w={expanded? '208px' : '50px'}
+            w={expanded? '180px' : '40px'}
             zIndex='1'>
                 <SideBarMenu 
                     showText={expanded}

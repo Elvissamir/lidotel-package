@@ -1,13 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
-import { LidotelAuthDataContext, UserProfileContext } from '../context'
+import { UserProfileContext } from '../context'
 import { LoadingState } from '../core/AppStates.types'
 
-interface UseLoadingStateProps {
-   
-}
-
-const useLoadingState = (params?: UseLoadingStateProps) => {
-    const { auth } = useContext(LidotelAuthDataContext)
+const useLoadingState = () => {
     const { loadingProfile } = useContext(UserProfileContext)
     const [ firstLoad, setFirstLoad ] = useState(true)
     const [loadingState, setLoadingState] = useState<LoadingState>('starting')
@@ -38,7 +33,7 @@ const useLoadingState = (params?: UseLoadingStateProps) => {
                 setStateMessage(getStateMessage('finished'))
             }
         }
-    }, [ auth, loadingProfile ])
+    }, [ loadingProfile ])
 
     return {
         loadingState,

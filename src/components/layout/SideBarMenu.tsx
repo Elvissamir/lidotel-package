@@ -26,7 +26,7 @@ const SideBarMenu = ({ items, selectedItemId, currentType, showText, onClickItem
                         padding='6px 0px'
                         _notLast={{ 
                             borderBottom: '2px', 
-                            borderBottomColor: '#5870bf' }}>
+                            borderBottomColor: 'yellow.500' }}>
                             <Button 
                                 aria-label={`Select ${item.text} item`}
                                 onClick={() => onClickItem(item.id)}
@@ -37,7 +37,7 @@ const SideBarMenu = ({ items, selectedItemId, currentType, showText, onClickItem
                                 key={key}
                                 minW='auto'
                                 w='full'
-                                _hover={{ backgroundColor: "#4964bb" }}>
+                                _hover={{ backgroundColor: "#be8100" }}>
                                     <Flex fontSize='20px' w='20px'>
                                         { item.icon }
                                     </Flex>

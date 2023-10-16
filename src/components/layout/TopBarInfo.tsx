@@ -1,11 +1,7 @@
 import { QuestionIcon, SearchIcon, SettingsIcon } from "@chakra-ui/icons"
 import { Button, Flex, useColorModeValue } from "@chakra-ui/react"
-import { useContext } from "react"
-import { LidotelAuthDataContext } from "../../context"
 import { UserProfile } from "../../core"
 import useSettingsModal from "../../hooks/useSettingsModal"
-import NotificationsBtn from "../common/NotificationsBtn"
-import ToggleModeBtn from "../common/ToggleModeBtn"
 import TopBarProfilePopover from "./TopBarProfilePopover"
 import TopBarSettingsModal from "./TopBarSettingsModal"
 
@@ -19,7 +15,6 @@ interface TopBarInfoProps {
 const TopBarInfo = ({ profileData, isClosingSession, onLogIn, onLogOut }: TopBarInfoProps) => {
     const iconsColor = useColorModeValue("blue.900", "white")
     const { showSettingsModal, hideSettingsModal, openSettingsModal } = useSettingsModal()
-    const { LidotelAppConfig } = useContext(LidotelAuthDataContext)
 
     const showSearchIcon = false
 

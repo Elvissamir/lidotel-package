@@ -89,7 +89,7 @@ const TopBarProfilePopover = ({ profileData, isClosingSession, onLogOut, onLogIn
                             marginTop='5px'
                             minW='auto'
                             w='auto'>
-                                Account Info
+                                Información
                         </Button>
                         <Button 
                             aria-label="Help"
@@ -103,7 +103,7 @@ const TopBarProfilePopover = ({ profileData, isClosingSession, onLogOut, onLogIn
                             marginTop='5px'
                             minW='auto'
                             w='auto'>
-                                Help
+                                Ayuda
                         </Button>
                     </Flex>
                     <Flex bg={lineColor} margin='10px 0' h='1px' w='full' />
@@ -130,7 +130,7 @@ const TopBarProfilePopover = ({ profileData, isClosingSession, onLogOut, onLogIn
                                 _hover={{ background: 'blue.800' }}
                                 marginLeft='15px'
                                 size='md'>
-                                    Log Out
+                                    Cerrar Sesión
                             </Button>
                           </>}
                         onClose={onClose} />
@@ -146,7 +146,7 @@ const TopBarProfilePopover = ({ profileData, isClosingSession, onLogOut, onLogIn
                             h='auto' 
                             color={logoutColor}
                             _hover={{ background: 'none', textDecor: 'underline' }}>
-                                { 'Log out' }
+                                { 'Cerrar Sesión' }
                         </Button> 
                         : 
                         <Button 
@@ -162,7 +162,7 @@ const TopBarProfilePopover = ({ profileData, isClosingSession, onLogOut, onLogIn
                             padding='0' 
                             color={loginColor}
                             _hover={{ background: 'none', textDecor: 'underline' }}>
-                                { 'Sign in' }
+                                { 'Iniciar Sesión' }
                         </Button>}
                 </PopoverFooter>
             </PopoverContent>
